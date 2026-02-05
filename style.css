@@ -20,6 +20,10 @@ h3{
     font-family: "Roboto", sans-serif;
 }
 
+span{
+    font-family: "Roboto", sans-serif;
+}
+
 button{
     font-family: "Roboto", sans-serif;
 }
@@ -126,5 +130,4 @@ header.scrolled .nav-icon-right {
   header:not(.scrolled):has(.nav-list-right:hover) .nav-icon-right {
     color: #5C4033;
   }
-
 }
