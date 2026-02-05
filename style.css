@@ -14,7 +14,6 @@ h1 {
 
 a{
     font-family: "Roboto", sans-serif;
-
 }
 
 h3{
@@ -26,7 +25,7 @@ button{
 }
 
 .text-main {
-  color: #6c584c;
+  color: #5C4033;
 }
 
 .card h4 {
@@ -106,7 +105,7 @@ header.scrolled .visible-menu,
 header.scrolled .search-icon,
 header.scrolled .nav-link,
 header.scrolled .nav-icon-right {
-  color: #6c584c !important;
+  color: #5C4033;
 }
 
 /* DESKTOP NAV HOVER HEADER */
@@ -125,7 +124,7 @@ header.scrolled .nav-icon-right {
   header:not(.scrolled):has(.nav-list-right:hover) .nav-link,
   header:not(.scrolled):has(.nav-list-left:hover) .nav-icon-right,
   header:not(.scrolled):has(.nav-list-right:hover) .nav-icon-right {
-    color: #6c584c;
+    color: #5C4033;
   }
 
 }
