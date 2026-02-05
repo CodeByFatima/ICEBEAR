@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "ICEBEAR Stone Gray Short A-Line Coat",
+    "title": "Stone Gray Short A-Line Coat | ICEBEAR",
+    "price": "90",
+    "description": "This Stone Gray Short A-Line Coat features a classic design with a comfortable fit, soft fabric, and elegant buttons, perfect for layering over casual or formal outfits.",
+    "image": "/assets/stone-gray-short.jpg",
+    "rating": 5,
+    "reviews": 9,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "XL"
+  },
+  {
+    "id": 2,
+    "name": "ICEBEAR Black Long Winter Coat",
+    "title": "Black Long Winter Coat | ICEBEAR",
+    "price": "120",
+    "description": "A luxurious black long winter coat with premium insulation, elegant silhouette, and timeless design perfect for cold weather.",
+    "image": "/assets/product-img-12.jpg",
+    "rating": 5,
+    "reviews": 15,
+    "sizes": ["SM", "MD", "LG", "XL"],
+    "defaultSize": "MD"
+  },
+  {
+    "id": 3,
+    "name": "ICEBEAR Camel Trench Coat",
+    "title": "Camel Trench Coat | ICEBEAR",
+    "price": "110",
+    "description": "Classic camel trench coat with double-breasted design, water-resistant fabric, and adjustable waist belt.",
+    "image": "/assets/product-img-10.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  }
+]
