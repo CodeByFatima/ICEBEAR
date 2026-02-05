@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecom | U Devs</title>
+  <!-- Linking stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Linking remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Linking google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-white font-mulish overflow-x-hidden">
+  <header class="fixed w-full z-[999] transition-all duration-500 ease-in-out" id="header">
+    <nav
+      class="flex justify-between items-center px-4 md:px-12 py-4 md:py-4 bg-transparent relative transition-all duration-500 ease-in-out">
+      <!-- Mobile Menu Toggle -->
+      <div class="text-[1.3rem] md:hidden">
+        <a href="#" class="menu-toggle">
+          <i class="ri-menu-line text-white visible-menu transition-colors duration-500 ease-in-out"></i>
+        </a>
+        <a href="#" class="menu-toggle hidden">
+          <i class="ri-close-line text-white closed-menu transition-colors duration-500 ease-in-out"></i>
+        </a>
+      </div>
+      <!-- Desktop Left Menu -->
+      <ul class="hidden md:flex gap-4 nav-list-left">
+        <li><a href="#product"
+            class="nav-link text-white uppercase text-base font-medium transition-all duration-500 ease-in-out hover:opacity-80">Product</a>
+        </li>
+        <li><a href="#brand"
+            class="nav-link text-white uppercase text-base font-medium transition-all duration-500 ease-in-out hover:opacity-80">Brand</a>
+        </li>
+        <li><a href="#support"
+            class="nav-link text-white uppercase text-base font-medium transition-all duration-500 ease-in-out hover:opacity-80">Support</a>
+        </li>
+      </ul>
+      <!-- Logo -->
+      <div class="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:z-10">
+        <a href=""
+          class="text-white font-playfair font-bold text-[1.7rem] uppercase logo transition-colors duration-500 ease-in-out">ICEBEAR</a>
+      </div>
+      <!-- Desktop Right Icons -->
+      <ul class="hidden md:flex gap-4 items-center nav-list-right">
+        <li><a href="#" class="nav-link text-white text-xl nav-icon-right transition-colors duration-500 ease-in-out"><i
+              class="ri-search-line"></i></a></li>
+        <li><a href="#" class="nav-link text-white text-xl nav-icon-right transition-colors duration-500 ease-in-out"><i
+              class="ri-user-line"></i></a></li>
+      </ul>
+      <!-- Mobile Search -->
+      <div class="md:hidden">
+        <a href="#" class="text-white text-[1.3rem] search-icon transition-colors duration-500 ease-in-out"><i
+            class="ri-search-line"></i></a>
+      </div>
+    </nav>
+    <!-- Mobile Menu Dropdown -->
+    <ul
+      class="fixed top-[68px] left-[-100%] w-full h-[calc(100vh-68px)] bg-white transition-all duration-[400ms] ease-in-out z-[998] nav-list-mobile md:hidden">
+      <li class="border-b border-border-soft">
+        <a href="#product" class="block px-8 py-6 text-main text-lg font-medium uppercase mobile-link">Product</a>
+      </li>
+      <li class="border-b border-border-soft">
+        <a href="#brand" class="block px-8 py-6 text-main text-lg font-medium uppercase mobile-link">Brand</a>
+      </li>
+      <li>
+        <a href="#support" class="block px-8 py-6 text-main text-lg font-medium uppercase mobile-link">Support</a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay"
+    class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out z-[997]">
+  </div>
+
+  <!-- Hero section -->
+  <div class="relative w-full mx-auto rounded" id="myCarousel">
+    <div class="relative w-full h-[500px] md:h-[600px]">
+      <div
+        class="carousel-item active absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-[600ms] ease-in-out [&.active]:opacity-100 [&.active]:z-[1]">
+        <img src="/assets/hero-img-1.jpg" alt="Slide 1" class="w-full h-full object-cover block">
+      </div>
+      <div
+        class="carousel-item absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-[600ms] ease-in-out [&.active]:opacity-100 [&.active]:z-[1]">
+        <img src="/assets/hero-img-2.jpg" alt="Slide 2" class="w-full h-full object-cover block">
+      </div>
+      <div
+        class="carousel-item absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-[600ms] ease-in-out [&.active]:opacity-100 [&.active]:z-[1]">
+        <img src="/assets/hero-img-3.jpg" alt="Slide 3" class="w-full h-full object-cover block">
+      </div>
+    </div>
+
+    <button
+      class="absolute top-1/2 -translate-y-1/2 left-[5px] text-[#333] border-none w-7 h-7 rounded-full cursor-pointer z-[2] text-xs transition-all duration-300 flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.15)] bg-white/90 hover:bg-white hover:-translate-y-1/2 hover:scale-110 hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]"
+      onclick="prevSlide()">
+      &#10094;
+    </button>
+
+    <button
+      class="absolute top-1/2 -translate-y-1/2 right-[5px] text-[#333] border-none w-7 h-7 rounded-full cursor-pointer z-[2] text-xs transition-all duration-300 flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.15)] bg-white/90 hover:bg-white hover:-translate-y-1/2 hover:scale-110 hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]"
+      onclick="nextSlide()">
+      &#10095;
+    </button>
+  </div>
+
+  <!-- Best sellers -->
+  <section class="best-sellers py-[96px] px-[16px] md:px-[36px]">
+    <div class="bestsellers-text">
+      <h1 class="text-center text-2xl md:text-4xl font-bold leading-10 text-[#5C4033]">Shop Bestsellers</h1>
+      <h3 class="text-center text-lg md:text-xl font-normal leading-8 text-[#5C4033] mb-5">Loved worldwide, for a
+        reason.</h3>
+    </div>
+    <div class="relative">
+      <!-- Previous Button -->
+      <button
+        class="prev-btn absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white border border-[#5C4033] text-[#5C4033] w-10 h-10 rounded-full hover:bg-[#5C4033] hover:text-white transition-colors duration-300 shadow-lg">&#10094;</button>
+      <!-- Cards Container -->
+      <div class="cards-wrapper overflow-hidden">
+        <div class="cards flex gap-4 transition-transform duration-500 ease-in-out">
+          <!-- Card 1 -->
+          <div class="card min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-11px)] lg:min-w-[calc(25%-12px)] flex flex-col">
+            <div class="flex flex-col">
+              <a href="#"><img src="/assets/product-img-1.jpg" alt="" class="w-full aspect-[3/4] object-cover"></a>
+              <h4 class="text-center text-xs sm:text-sm md:text-base font-semibold mt-2 text-[#5C4033] px-1 sm:px-2 
+           leading-[1.4] h-[2.8em] overflow-hidden 
+           line-clamp-2">
+                <a href="#" class="break-words">Stone Gray Short A-Line Coat</a>
+              </h4>
+              <button
+                class="w-full uppercase text-[10px] sm:text-xs md:text-sm font-semibold border border-[#5C4033] text-[#5C4033] px-2 sm:px-3 py-2 mt-2 hover:text-white hover:bg-[#5C4033] transition-colors duration-[0.4s]">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-11px)] lg:min-w-[calc(25%-12px)] flex flex-col">
+            <div class="flex flex-col">
+              <a href="#"><img src="/assets/product-img-2.jpg" alt="" class="w-full aspect-[3/4] object-cover"></a>
+              <h4 class="text-center text-xs sm:text-sm md:text-base font-semibold mt-2 text-[#5C4033] px-1 sm:px-2 
+           leading-[1.4] h-[2.8em] overflow-hidden 
+           line-clamp-2">
+                <a href="#" class="break-words">Khaki Mid-Length Double-Breasted Coat</a>
+              </h4>
+              <button
+                class="w-full uppercase text-[10px] sm:text-xs md:text-sm font-semibold border border-[#5C4033] text-[#5C4033] px-2 sm:px-3 py-2 mt-2 hover:text-white hover:bg-[#5C4033] transition-colors duration-[0.4s]">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-11px)] lg:min-w-[calc(25%-12px)] flex flex-col">
+            <div class="flex flex-col">
+              <a href="#"><img src="/assets/product-img-3.jpg" alt="" class="w-full aspect-[3/4] object-cover"></a>
+              <h4 class="text-center text-xs sm:text-sm md:text-base font-semibold mt-2 text-[#5C4033] px-1 sm:px-2 
+           leading-[1.4] h-[2.8em] overflow-hidden 
+           line-clamp-2">
+                <a href="#" class="break-words">Jet Black Mid-Length Double-Breasted Coat</a>
+              </h4>
+              <button
+                class="w-full uppercase text-[10px] sm:text-xs md:text-sm font-semibold border border-[#5C4033] text-[#5C4033] px-2 sm:px-3 py-2 mt-2 hover:text-white hover:bg-[#5C4033] transition-colors duration-[0.4s]">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="card min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-11px)] lg:min-w-[calc(25%-12px)] flex flex-col">
+            <div class="flex flex-col">
+              <a href="#"><img src="/assets/product-img-4.jpg" alt="" class="w-full aspect-[3/4] object-cover"></a>
+              <h4 class="text-center text-xs sm:text-sm md:text-base font-semibold mt-2 text-[#5C4033] px-1 sm:px-2 
+           leading-[1.4] h-[2.8em] overflow-hidden 
+           line-clamp-2">
+                <a href="#" class="break-words">Light Caramel Short A-Line Coat</a>
+              </h4>
+              <button
+                class="w-full uppercase text-[10px] sm:text-xs md:text-sm font-semibold border border-[#5C4033] text-[#5C4033] px-2 sm:px-3 py-2 mt-2 hover:text-white hover:bg-[#5C4033] transition-colors duration-[0.4s]">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="card min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-11px)] lg:min-w-[calc(25%-12px)] flex flex-col">
+            <div class="flex flex-col">
+              <a href="#"><img src="/assets/product-img-5.jpg" alt="" class="w-full aspect-[3/4] object-cover"></a>
+              <h4 class="text-center text-xs sm:text-sm md:text-base font-semibold mt-2 text-[#5C4033] px-1 sm:px-2 
+           leading-[1.4] h-[2.8em] overflow-hidden 
+           line-clamp-2">
+                <a href="#" class="break-words">Slate Gray Mid-Length Double-Breasted Coat</a>
+              </h4>
+              <button
+                class="w-full uppercase text-[10px] sm:text-xs md:text-sm font-semibold border border-[#5C4033] text-[#5C4033] px-2 sm:px-3 py-2 mt-2 hover:text-white hover:bg-[#5C4033] transition-colors duration-[0.4s]">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="card min-w-[calc(50%-8px)] sm:min-w-[calc(33.333%-11px)] lg:min-w-[calc(25%-12px)] flex flex-col">
+            <div class="flex flex-col">
+              <a href="#"><img src="/assets/product-img-7.jpg" alt="" class="w-full aspect-[3/4] object-cover"></a>
+              <h4 class="text-center text-xs sm:text-sm md:text-base font-semibold mt-2 text-[#5C4033] px-1 sm:px-2 
+           leading-[1.4] h-[2.8em] overflow-hidden 
+           line-clamp-2">
+                <a href="#" class="break-words">Dark Taupe Mid-Length Double-Breasted Coat</a>
+              </h4>
+              <button
+                class="w-full uppercase text-[10px] sm:text-xs md:text-sm font-semibold border border-[#5C4033] text-[#5C4033] px-2 sm:px-3 py-2 mt-2 hover:text-white hover:bg-[#5C4033] transition-colors duration-[0.4s]">
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <button
+        class="next-btn absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white border border-[#5C4033] text-[#5C4033] w-10 h-10 rounded-full hover:bg-[#5C4033] hover:text-white transition-colors duration-300 shadow-lg">
+        &#10095;
+      </button>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="collections px-[16px] md:px-[36px]">
+    <a href="#" class="collections-container flex justify-center gap-5 md:gap-10">
+      <!-- First collection -->
+      <div class="Items group w-full max-w-[30rem] cursor-pointer">
+        <div class="aspect-square overflow-hidden">
+          <img class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-110"
+            src="/assets/product-img-5.jpg" alt="">
+        </div>
+        <h1 class="text-lg md:text-2xl font-bold mt-3 text-[#5C4033] uppercase underline-animate">Long coats</h1>
+      </div>
+      <!-- Second collection -->
+      <div class="Items group w-full max-w-[30rem] cursor-pointer">
+        <div class="aspect-square overflow-hidden">
+          <img class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-110"
+            src="/assets/product-img-4.jpg" alt="">
+        </div>
+        <h1 class="text-lg md:text-2xl font-bold mt-3 text-[#5C4033] uppercase underline-animate">Short coats</h1>
+      </div>
+    </a>
+  </section>
+
+  <!-- Social -->
+  <div class="slider-container overflow-hidden relative w-full py-12 sm:py-16 md:py-24">
+    <h1 class="text-center text-xl sm:text-2xl md:text-4xl font-bold my-4 sm:my-6 md:my-8 text-[#5C4033] uppercase px-4">
+      @Icebear.global</h1>
+    <div class="slider-track flex animate-scroll w-max">
+      <div class="flex gap-2 sm:gap-3 md:gap-4 pr-2 sm:pr-3 md:pr-4">
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-12.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-13.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-14.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-15.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+      </div>
+      <!-- Duplicated -->
+      <div class="flex gap-2 sm:gap-3 md:gap-4 pr-2 sm:pr-3 md:pr-4">
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-12.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-13.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-14.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+        <a href="#"
+          class="relative group w-[12rem] sm:w-[16rem] md:w-[20rem] h-[10rem] sm:h-[14rem] md:h-[18rem] flex-shrink-0 overflow-hidden rounded-lg">
+          <img src="/assets/product-img-15.jpg" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- Minimal thin Instagram SVG -->
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.5 6.5h.01" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-container bg-[#5C4033]">
+      <div
+        class="firstpart flex flex-col lg:flex-row justify-between items-start lg:items-center px-6 sm:px-8 lg:px-[36px] py-8 sm:py-12 lg:py-[64px] gap-8 lg:gap-0">
+        <div class="justify-self-start">
+          <h1 class="logo text-4xl sm:text-6xl lg:text-9xl text-bold uppercase text-[#D9AB86]">IceBear</h1>
+        </div>
+        <div class="nav-links flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-10 w-full lg:w-auto">
+          <div class="brand">
+            <h4 class="uppercase text-base sm:text-lg lg:text-[20px] text-[#D9AB86] mb-2 sm:mb-3 lg:mb-[12px]">Brand
+            </h4>
+            <ul class="space-y-1">
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">About Us</a></li>
+            </ul>
+          </div>
+          <div class="product">
+            <h4 class="uppercase text-base sm:text-lg lg:text-[20px] text-[#D9AB86] mb-2 sm:mb-3 lg:mb-[12px]">Product
+            </h4>
+            <ul class="space-y-1">
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">By Category</a></li>
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">By Concern</a></li>
+            </ul>
+          </div>
+          <div class="support">
+            <h4 class="uppercase text-base sm:text-lg lg:text-[20px] text-[#D9AB86] mb-2 sm:mb-3 lg:mb-[12px]">Support
+            </h4>
+            <ul class="space-y-1">
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">FAQs</a></li>
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="policy">
+            <h4 class="uppercase text-base sm:text-lg lg:text-[20px] text-[#D9AB86] mb-2 sm:mb-3 lg:mb-[12px]">Policy
+            </h4>
+            <ul class="space-y-1">
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">Privacy Policy</a></li>
+              <li><a class="text-xs sm:text-sm lg:text-[14px] text-white hover:text-[#859A60] transition-colors"
+                  href="#">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="w-[94%] mx-auto border-[#D9AB86]">
+      <div class="secondpart py-16">
+        <div class="form max-w-xl mx-auto px-8 flex flex-col items-center text-center">
+          <div class="form-heading">
+            <h3 class="text-[#D9AB86] text-2xl font-semibold">JOIN THE GLASS HAIR CLUB</h3>
+          </div>
+          <div class="form-details mb-6">
+            <p class="text-white">Sign up for UNOVE and get closer to glass hair—no filters needed.</p>
+          </div>
+          <div class="form-elements w-full flex flex-col gap-4">
+            <div class="input-element">
+              <input type="email" placeholder="Your email address"
+                class="w-full px-4 py-3 rounded-md focus:outline-none">
+            </div>
+            <div class="btn-element">
+              <button class="w-full bg-[#D9AB86] text-[#5C4033] py-3 rounded-md 
+               hover:bg-[#e0b28f] transition-colors duration-500">Join us</button>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">
+              *By registering, I agree to receive emails from UNOVE. I agree that UNOVE may provide you with
+              personalized advertising via email and other online channels. Click to read UNOVE Terms and Conditions and
+              Privacy.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="thirdpart pb-2">
+        <p class="text-center text-[12px] text-white">Copyright © 2026 ICEBEAR. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+</body>
+</html>
