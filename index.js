@@ -91,6 +91,7 @@ function handleScroll() {
 }
 window.addEventListener('scroll', handleScroll, { passive: true });
 
+// Collection Slider
 const cardsContainer = document.querySelector('.cards');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
