@@ -94,5 +94,101 @@
     "reviews": 12,
     "sizes": ["SM", "LG", "XL"],
     "defaultSize": "LG"
+  },
+  {
+     "id": 9,
+    "name": "ICEBEAR Khaki Beige Mid-Length Double-Breasted Coat",
+    "title": "Khaki Beige Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Khaki Beige Classic Trench Coat showcases a timeless silhouette with smooth, luxurious fabric and minimalist button accents for effortless sophistication.",
+    "image": "/assets/khaki-beige-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+     "id": 10,
+    "name": "ICEBEAR Charcoal Black Mid-Length Double-Breasted Coat",
+    "title": "Charcoal Black Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Charcoal Black Slim-Fit Overcoat exudes modern elegance, featuring a sleek cut, premium wool blend, and subtle tailoring for a sharp, polished look.",
+    "image": "/assets/charcoal-black-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+    "id": 11,
+    "name": "ICEBEAR Dark Gray Mid-Length Double-Breasted Coat",
+    "title": "Dark Gray Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "150",
+    "description": "This Dark Gray Double-Breasted Coat combines structured lines with soft, textured fabric, highlighted by stylish cuff details for everyday refinement.",
+    "image": "/assets/smoky-graphite-short.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+     "id": 12,
+    "name": "ICEBEAR Taupe Brown Mid-Length Double-Breasted Coat",
+    "title": "Taupe Brown Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Taupe Brown Wrap Coat offers a cozy yet sophisticated design, with a flowing silhouette, soft fabric, and an adjustable belt for a flattering fit.",
+    "image": "/assets/taupe-brown-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+     "id": 13,
+    "name": "ICEBEAR Chestnut Brown Mid-Length Double-Breasted Coat",
+    "title": "Chestnut Brown Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Chestnut Brown Peacoat features a classic cut, warm fabric, and elegant button closure, perfect for a timeless wardrobe staple.",
+    "image": "/assets/chestnut-brown-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+     "id": 14,
+    "name": "ICEBEAR Espresso Mid-Length Double-Breasted Coat",
+    "title": "Espresso Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Espresso Longline Coat delivers a rich, deep tone with a tailored fit, premium material, and chic collar detailing for understated luxury.",
+    "image": "/assets/espresso-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+     "id": 15,
+    "name": "ICEBEAR Saddle Brown Mid-Length Double-Breasted Coat",
+    "title": "Saddle Brown Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Saddle Brown Moto-Inspired Coat blends rugged charm with polished design, featuring durable fabric, zipper accents, and a sharp silhouette.",
+    "image": "/assets/saddle-brown-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
+  },
+  {
+     "id": 16,
+    "name": "ICEBEAR Cocoa Brown Mid-Length Double-Breasted Coat",
+    "title": "Cocoa Brown Mid-Length Double-Breasted Coat | ICEBEAR",
+    "price": "120",
+    "description": "This Cocoa Brown Belted Coat highlights a refined, structured cut, soft tactile fabric, and sophisticated button accents for versatile styling.",
+    "image": "/assets/cocoa-brown-long.jpg",
+    "rating": 4,
+    "reviews": 12,
+    "sizes": ["SM", "LG", "XL"],
+    "defaultSize": "LG"
   }
 ]
