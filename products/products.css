@@ -16,3 +16,9 @@ input[type="number"] {
 p{
    font-family: "Roboto", sans-serif;
 }
+
+@media (min-width: 900px) and (max-width: 1023px) {
+      .md-lg {
+        background-color: orange; /* Example style */
+      }
+    }
